@@ -11,12 +11,11 @@ public class Ejercicio5 {
 
 	public static void main(String[] args) {
 		
-		Path path = Paths.get("src", "boletin1", "archivos", "ejercicio5.txt");
 		Scanner sc = new Scanner(System.in);
 		String nombre = "";
 		int edad;
 
-		try (BufferedWriter bw = new BufferedWriter(new FileWriter(path.toFile(), true))) {
+		try (BufferedWriter bw = new BufferedWriter(new FileWriter("src\\boletin1\\archivos\\ejercicio5.txt", true))) {
 			
 			System.out.println("Introduce tu nombre: ");
 			nombre = sc.nextLine();
