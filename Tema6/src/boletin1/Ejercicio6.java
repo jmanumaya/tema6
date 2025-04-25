@@ -8,12 +8,10 @@ public class Ejercicio6 {
     	
         List<Integer> numeros = new ArrayList<>();
         String linea;
-        int numero;
 
         try (BufferedReader br = new BufferedReader(new FileReader("Tema6\\src\\boletin1\\archivos\\ejercicio6out.txt"))) {
             while ((linea = br.readLine()) != null) {
-                numero = Integer.parseInt(linea);
-                numeros.add(numero);
+                numeros.add(Integer.parseInt(linea));
             }
 
             Collections.sort(numeros);
