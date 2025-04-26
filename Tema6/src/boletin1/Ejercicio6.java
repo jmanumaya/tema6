@@ -9,14 +9,14 @@ public class Ejercicio6 {
         List<Integer> numeros = new ArrayList<>();
         String linea;
 
-        try (BufferedReader br = new BufferedReader(new FileReader("Tema6\\src\\boletin1\\archivos\\ejercicio6out.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("src\\boletin1\\archivos\\ejercicio6out.txt"))) {
             while ((linea = br.readLine()) != null) {
                 numeros.add(Integer.parseInt(linea));
             }
 
             Collections.sort(numeros);
 
-            try (BufferedWriter bw = new BufferedWriter(new FileWriter("Tema6\\src\\boletin1\\archivos\\ejercicio6in.txt", true))) {
+            try (BufferedWriter bw = new BufferedWriter(new FileWriter("src\\boletin1\\archivos\\ejercicio6in.txt", true))) {
                 for (int num : numeros) {
                     bw.write(String.valueOf(num));
                     bw.newLine();
